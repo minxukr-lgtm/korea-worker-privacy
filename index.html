@@ -234,6 +234,7 @@
           <li><a href="#en-location">GPS / Location Data</a></li>
           <li><a href="#en-use">How We Use Information</a></li>
           <li><a href="#en-share">Sharing &amp; Third Parties</a></li>
+          <li><a href="#en-ai">AI-Translated News &amp; Friend Search</a></li>
           <li><a href="#en-ads">Advertising &amp; Tracking</a></li>
           <li><a href="#en-retention">Data Retention &amp; Security</a></li>
           <li><a href="#en-rights">Your Rights</a></li>
@@ -462,7 +463,7 @@
             own marketing.</li>
       </ul>
 
-      <h2 id="en-retention"><span class="num">6</span>Data Retention &amp; Security</h2>
+      <h2 id="en-retention"><span class="num">7</span>Data Retention &amp; Security</h2>
       <ul>
         <li>Account data is retained while your account is active. If you
             delete your account from <em>Settings → Account → Delete
@@ -476,7 +477,7 @@
             delegated entirely to Google or Apple.</li>
       </ul>
 
-      <h2 id="en-rights"><span class="num">7</span>Your Rights</h2>
+      <h2 id="en-rights"><span class="num">8</span>Your Rights</h2>
       <p>
         Subject to your jurisdiction (e.g. GDPR in the EU/EEA, PIPA in the
         Republic of Korea, CCPA/CPRA in California), you have the right to:
@@ -491,7 +492,7 @@
         <li>Lodge a complaint with your local data-protection authority.</li>
       </ul>
 
-      <h2 id="en-children"><span class="num">8</span>Children's Privacy</h2>
+      <h2 id="en-children"><span class="num">9</span>Children's Privacy</h2>
       <p>
         The App is intended for users <strong>17 years of age or older</strong>.
         We do not knowingly collect personal information from children under
@@ -500,14 +501,14 @@
         us and we will delete it.
       </p>
 
-      <h2 id="en-changes"><span class="num">9</span>Changes to this Policy</h2>
+      <h2 id="en-changes"><span class="num">10</span>Changes to this Policy</h2>
       <p>
         We may update this Policy as the App evolves. The "Effective date"
         will reflect the latest revision. Material changes will be announced
         in-app. Continued use after a change indicates acceptance.
       </p>
 
-      <h2 id="en-contact"><span class="num">10</span>Contact</h2>
+      <h2 id="en-contact"><span class="num">11</span>Contact</h2>
       <ul>
         <li>Email: <a href="mailto:minxukr@gmail.com">minxukr@gmail.com</a></li>
         <li>In-app: <em>Settings → Support Center → Contact us</em></li>
@@ -533,6 +534,7 @@
           <li><a href="#ko-location">GPS·위치정보</a></li>
           <li><a href="#ko-use">정보의 이용</a></li>
           <li><a href="#ko-share">정보의 제공·제3자</a></li>
+          <li><a href="#ko-ai">AI 뉴스 &amp; 이메일 친구 검색</a></li>
           <li><a href="#ko-ads">광고 및 추적</a></li>
           <li><a href="#ko-retention">보유기간 및 보안</a></li>
           <li><a href="#ko-rights">이용자의 권리</a></li>
@@ -551,6 +553,11 @@
               <td>표시 이름, 이메일, 프로필 사진 URL, 언어, 지역(시/도), 시급,
                   대기업 여부</td>
               <td>이용자 본인, Google 로그인, Apple 로그인</td></tr>
+          <tr><td>이메일 검색 인덱스 <em>(v1.0.23+)</em></td>
+              <td>"이메일로 친구 찾기" 기능을 위해 이메일의 소문자 버전을 공개
+                  프로필에 저장합니다. 다른 사용자는 정확한 이메일을 알아야만
+                  찾을 수 있으며, 이메일 목록을 탐색할 수 없습니다.</td>
+              <td>로그인 이메일에서 파생</td></tr>
           <tr><td>인증 식별자</td>
               <td>Firebase 사용자 ID(uid). Google/Apple OAuth 토큰은 로그인
                   시점에만 사용되며 당사는 저장하지 않습니다.</td>
@@ -559,8 +566,12 @@
               <td>출퇴근 시각, 근무 시간, 급여 내역, 메모</td>
               <td>이용자 본인</td></tr>
           <tr><td>커뮤니티 콘텐츠</td>
-              <td>게시물, 댓글, 반응, 채팅 메시지(텍스트·이미지·동영상·음성),
-                  신고, 차단</td>
+              <td>게시물, 댓글(한국 뉴스 댓글 포함), 반응, 채팅 메시지(텍스트·이미지·
+                  동영상·음성), 신고, 차단</td>
+              <td>이용자 본인</td></tr>
+          <tr><td>뉴스 상호작용 <em>(v1.0.23+)</em></td>
+              <td>AI 번역 한국 뉴스 기사의 좋아요, 댓글, 공유 횟수. 상호작용 시
+                  사용자 UID + 표시 이름 + 사진 URL과 함께 저장됩니다.</td>
               <td>이용자 본인</td></tr>
           <tr><td>미디어 파일</td>
               <td>프로필 사진 또는 커뮤니티에 공유하는 사진·동영상·음성 녹음</td>
@@ -657,6 +668,27 @@
               <td>인앱 배너 광고 표시</td>
               <td><a href="https://support.google.com/admob/answer/6128543"
                      target="_blank" rel="noopener">링크</a></td></tr>
+          <tr><td>Google Gemini AI <em>(서버, v1.0.23+)</em></td>
+              <td>한국 뉴스를 베트남어로 번역. <strong>사용자 데이터는 처리하지
+                  않습니다.</strong> 한국 신문의 공개 RSS 콘텐츠만 Gemini로
+                  전송됩니다.</td>
+              <td><a href="https://ai.google.dev/gemini-api/terms"
+                     target="_blank" rel="noopener">링크</a></td></tr>
+          <tr><td>Unsplash <em>(서버, v1.0.23+)</em></td>
+              <td>뉴스 기사용 이미지 제공(무료 라이선스). 사용자 데이터를
+                  받지 않습니다.</td>
+              <td><a href="https://unsplash.com/privacy"
+                     target="_blank" rel="noopener">링크</a></td></tr>
+          <tr><td>GitHub Actions <em>(서버, v1.0.23+)</em></td>
+              <td>뉴스 파이프라인 실행(RSS 수집 → AI 번역 → Firestore 저장).
+                  사용자 데이터를 처리하지 않습니다.</td>
+              <td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+                     target="_blank" rel="noopener">링크</a></td></tr>
+          <tr><td>Gmail SMTP <em>(서버, v1.0.23+)</em></td>
+              <td>새 뉴스 초안에 대해 관리자에게 알림 이메일 전송. 일반
+                  사용자에게는 발송되지 않습니다.</td>
+              <td><a href="https://policies.google.com/privacy"
+                     target="_blank" rel="noopener">링크</a></td></tr>
         </tbody>
       </table>
       <p>
@@ -664,7 +696,31 @@
         경우 정보를 공개할 수 있습니다.
       </p>
 
-      <h2 id="ko-ads"><span class="num">5</span>광고 및 추적</h2>
+      <h2 id="ko-ai"><span class="num">5</span>AI 뉴스 &amp; 이메일 친구 검색</h2>
+      <p><strong>한국 뉴스(AI 자동 번역):</strong></p>
+      <ul>
+        <li>한국 신문(Korea Herald, Korea Times, Yonhap News 등)의 공개 RSS
+            피드에서 매시간 06:00-22:00 KST에 뉴스를 가져옵니다.</li>
+        <li>Google Gemini AI가 콘텐츠를 베트남어로 번역하고 다시 작성합니다.
+            <strong>귀하의 개인 데이터는 Gemini로 전송되지 않습니다.</strong></li>
+        <li>기사는 게시 전 앱 관리자가 검토합니다.</li>
+        <li>뉴스 기사를 좋아요·댓글·공유하면 UID, 표시 이름, 사진 URL이
+            상호작용과 함께 저장됩니다 — 커뮤니티 게시물과 동일합니다.</li>
+      </ul>
+      <p><strong>이메일로 친구 찾기 (v1.0.23+):</strong></p>
+      <ul>
+        <li>로그인 이메일의 소문자 버전(<code>emailLowercase</code>)이 공개
+            사용자 프로필에 저장됩니다.</li>
+        <li>다른 인증된 사용자는 정확한 이메일을 입력해야만 귀하를 찾을 수
+            있습니다 — 모든 이메일을 탐색하거나 나열할 수 있는 방법은
+            없습니다.</li>
+        <li>검색은 정확히 일치하는 경우에만 작동합니다. 부분 검색이나
+            와일드카드는 지원되지 않습니다.</li>
+        <li>옵트아웃하려면 아래 이메일로 문의해 주세요. 프로필에서 해당
+            필드를 수동으로 제거할 수 있습니다.</li>
+      </ul>
+
+      <h2 id="ko-ads"><span class="num">6</span>광고 및 추적</h2>
       <p>
         본 앱은 <strong>Google AdMob</strong>을 통해 광고를 표시합니다. AdMob은
         관련성 높은 광고 제공 및 광고 성과 측정을 위해 모바일 광고 식별자
@@ -679,7 +735,7 @@
             않습니다.</li>
       </ul>
 
-      <h2 id="ko-retention"><span class="num">6</span>보유기간 및 보안</h2>
+      <h2 id="ko-retention"><span class="num">7</span>보유기간 및 보안</h2>
       <ul>
         <li>계정 정보는 계정이 활성 상태인 동안 보관됩니다. <em>설정 → 계정 →
             계정 삭제</em>에서 계정을 삭제하시면 프로필, 급여 기록, 게시물,
@@ -692,7 +748,7 @@
             전적으로 위임됩니다.</li>
       </ul>
 
-      <h2 id="ko-rights"><span class="num">7</span>이용자의 권리</h2>
+      <h2 id="ko-rights"><span class="num">8</span>이용자의 권리</h2>
       <p>
         해당 관할권(예: 한국 개인정보보호법(PIPA), EU GDPR, 캘리포니아 CCPA/
         CPRA)에 따라 이용자는 다음 권리를 가집니다.
@@ -706,7 +762,7 @@
         <li>관할 개인정보 보호 기관에 민원 제기.</li>
       </ul>
 
-      <h2 id="ko-children"><span class="num">8</span>아동의 개인정보 보호</h2>
+      <h2 id="ko-children"><span class="num">9</span>아동의 개인정보 보호</h2>
       <p>
         본 앱은 <strong>만 17세 이상</strong> 이용자를 대상으로 합니다. 이
         연령 미만의 아동으로부터 의도적으로 개인정보를 수집하지 않으며, 첫
@@ -714,14 +770,14 @@
         알게 되시면 아래 연락처로 문의해 주시기 바랍니다. 즉시 삭제하겠습니다.
       </p>
 
-      <h2 id="ko-changes"><span class="num">9</span>방침의 변경</h2>
+      <h2 id="ko-changes"><span class="num">10</span>방침의 변경</h2>
       <p>
         본 방침은 앱의 발전에 따라 변경될 수 있습니다. 상단의 "시행일"이 최신
         개정일을 나타냅니다. 중대한 변경은 앱 내에서 공지되며, 변경 후 계속
         이용 시 변경 내용에 동의한 것으로 간주됩니다.
       </p>
 
-      <h2 id="ko-contact"><span class="num">10</span>문의처</h2>
+      <h2 id="ko-contact"><span class="num">11</span>문의처</h2>
       <ul>
         <li>이메일: <a href="mailto:minxukr@gmail.com">minxukr@gmail.com</a></li>
         <li>앱 내: <em>설정 → 고객 지원 → 문의하기</em></li>
@@ -748,6 +804,7 @@
           <li><a href="#vi-location">Dữ liệu GPS / Vị trí</a></li>
           <li><a href="#vi-use">Cách sử dụng thông tin</a></li>
           <li><a href="#vi-share">Chia sẻ &amp; Bên thứ ba</a></li>
+          <li><a href="#vi-ai">Tin tức AI &amp; Tìm bạn theo email</a></li>
           <li><a href="#vi-ads">Quảng cáo &amp; Theo dõi</a></li>
           <li><a href="#vi-retention">Lưu trữ &amp; Bảo mật dữ liệu</a></li>
           <li><a href="#vi-rights">Quyền của bạn</a></li>
@@ -767,6 +824,12 @@
               <td>Tên hiển thị, email, ảnh đại diện, ngôn ngữ, khu vực
                   (tỉnh/thành), mức lương, cờ doanh nghiệp lớn</td>
               <td>Bạn, Google Sign-In, Apple Sign-In</td></tr>
+          <tr><td>Email tìm kiếm <em>(v1.0.23+)</em></td>
+              <td>Một bản email DẠNG CHỮ THƯỜNG được lưu vào hồ sơ công khai
+                  để tính năng "Tìm bạn theo email" hoạt động. Người khác
+                  CHỈ tìm được bạn nếu họ biết chính xác email của bạn —
+                  không thể duyệt danh sách email.</td>
+              <td>Suy ra từ email đăng nhập</td></tr>
           <tr><td>Định danh xác thực</td>
               <td>Firebase user ID (uid). Token OAuth Google/Apple chỉ dùng
                   tại thời điểm đăng nhập, chúng tôi không lưu trữ.</td>
@@ -776,8 +839,14 @@
                   ghi chú</td>
               <td>Bạn</td></tr>
           <tr><td>Nội dung cộng đồng</td>
-              <td>Bài đăng, bình luận, reaction, tin nhắn (văn bản, hình
-                  ảnh, video, thoại), báo cáo, chặn</td>
+              <td>Bài đăng, bình luận (kể cả bình luận trên bài tin tức Hàn
+                  Quốc), reaction, tin nhắn (văn bản, hình ảnh, video,
+                  thoại), báo cáo, chặn</td>
+              <td>Bạn</td></tr>
+          <tr><td>Tương tác bài tin <em>(v1.0.23+)</em></td>
+              <td>Lượt thích, bình luận, lượt chia sẻ trên bài tin Hàn Quốc
+                  (do AI dịch). Lưu kèm UID + tên hiển thị + ảnh đại diện
+                  của bạn khi bạn tương tác.</td>
               <td>Bạn</td></tr>
           <tr><td>Tệp media</td>
               <td>Ảnh, video, ghi âm bạn chọn để chia sẻ hoặc đặt làm
@@ -837,181 +906,4 @@
       </ul>
       <h3>Quyền kiểm soát của bạn</h3>
       <ul>
-        <li>Bạn có thể từ chối hoặc thu hồi quyền vị trí bất cứ lúc nào
-            trong Cài đặt thiết bị. Ứng dụng vẫn hoạt động bình thường;
-            chỉ mất tính năng chấm công và tự động xác định khu vực.</li>
-        <li>Bạn có thể chọn khu vực thủ công từ danh sách bất cứ lúc nào
-            mà không cần cấp quyền GPS.</li>
-      </ul>
-
-      <h2 id="vi-use"><span class="num">3</span>Cách sử dụng thông tin</h2>
-      <ul>
-        <li>Tạo và quản lý tài khoản, xác thực đăng nhập.</li>
-        <li>Tính toán và hiển thị lương, ngày công, tăng ca và biểu đồ
-            liên quan.</li>
-        <li>Cung cấp tính năng cộng đồng: bài đăng, bình luận, chat 1-1,
-            phòng chat, tin nhắn thoại/video, reaction, chặn và báo
-            cáo.</li>
-        <li>Gửi thông báo đẩy mà bạn đã đồng ý nhận.</li>
-        <li>Cung cấp tính năng chấm công và cập nhật khu vực dựa trên GPS
-            được mô tả ở Mục 2.</li>
-        <li>Phát hiện hành vi vi phạm, thực thi quy tắc cộng đồng, xử lý
-            báo cáo.</li>
-        <li>Hiển thị quảng cáo qua Google AdMob (xem Mục 5).</li>
-        <li>Vận hành, bảo mật, gỡ lỗi và cải thiện Ứng dụng.</li>
-      </ul>
-      <p>
-        Cơ sở pháp lý (nếu áp dụng): thực hiện hợp đồng, sự đồng ý của bạn
-        (vị trí, thông báo, ID theo dõi), và lợi ích hợp pháp trong việc
-        giữ Ứng dụng an toàn và hoạt động.
-      </p>
-
-      <h2 id="vi-share"><span class="num">4</span>Chia sẻ &amp; Bên thứ ba</h2>
-      <p>
-        Chúng tôi không bán thông tin cá nhân của bạn. Chúng tôi chỉ chia
-        sẻ thông tin với các nhà cung cấp dịch vụ giúp Ứng dụng hoạt động:
-      </p>
-      <table>
-        <thead><tr><th>Nhà cung cấp</th><th>Mục đích</th><th>Chính sách</th></tr></thead>
-        <tbody>
-          <tr><td>Google Firebase
-                  (Authentication, Cloud Firestore, Cloud Storage,
-                  Cloud Messaging)</td>
-              <td>Đăng nhập, lưu trữ dữ liệu, lưu trữ tệp, thông báo
-                  đẩy</td>
-              <td><a href="https://firebase.google.com/support/privacy"
-                     target="_blank" rel="noopener">link</a></td></tr>
-          <tr><td>Google Sign-In</td>
-              <td>Đăng nhập OAuth bằng tài khoản Google</td>
-              <td><a href="https://policies.google.com/privacy"
-                     target="_blank" rel="noopener">link</a></td></tr>
-          <tr><td>Sign in with Apple</td>
-              <td>Đăng nhập OAuth bằng Apple ID (iOS)</td>
-              <td><a href="https://www.apple.com/legal/privacy/"
-                     target="_blank" rel="noopener">link</a></td></tr>
-          <tr><td>Google AdMob</td>
-              <td>Hiển thị quảng cáo banner trong app</td>
-              <td><a href="https://support.google.com/admob/answer/6128543"
-                     target="_blank" rel="noopener">link</a></td></tr>
-        </tbody>
-      </table>
-      <p>
-        Chúng tôi cũng có thể tiết lộ thông tin nếu pháp luật, thủ tục
-        pháp lý yêu cầu, hoặc để bảo vệ quyền lợi, tài sản và an toàn của
-        người dùng hoặc công chúng.
-      </p>
-
-      <h2 id="vi-ads"><span class="num">5</span>Quảng cáo &amp; Theo dõi</h2>
-      <p>
-        Ứng dụng hiển thị quảng cáo qua <strong>Google AdMob</strong>.
-        AdMob có thể sử dụng định danh quảng cáo di động (IDFA trên iOS,
-        AAID trên Android) để hiển thị quảng cáo phù hợp và đo lường hiệu
-        quả.
-      </p>
-      <ul>
-        <li>Trên iOS 14.5+, Ứng dụng yêu cầu sự đồng ý App Tracking
-            Transparency (ATT) trước khi theo dõi. Nếu bạn từ chối, quảng
-            cáo vẫn hiển thị nhưng không cá nhân hoá.</li>
-        <li>Trên Android, bạn có thể đặt lại hoặc giới hạn ID quảng cáo
-            bất cứ lúc nào tại <em>Cài đặt → Quyền riêng tư → Quảng
-            cáo</em>.</li>
-        <li>Chúng tôi không dùng AdMob để retarget bạn trên các ứng dụng
-            khác cho mục đích marketing của riêng mình.</li>
-      </ul>
-
-      <h2 id="vi-retention"><span class="num">6</span>Lưu trữ &amp; Bảo mật dữ liệu</h2>
-      <ul>
-        <li>Dữ liệu tài khoản được giữ trong khi tài khoản còn hoạt động.
-            Khi bạn xoá tài khoản tại <em>Cài đặt → Tài khoản → Xoá tài
-            khoản</em>, hồ sơ, dữ liệu lương, bài đăng, tin nhắn và media
-            tải lên sẽ bị xoá vĩnh viễn trong vòng 30 ngày, trừ khi pháp
-            luật yêu cầu lưu lâu hơn.</li>
-        <li>Dữ liệu được lưu trên Google Firebase / Google Cloud, được bảo
-            vệ bằng mã hoá khi truyền (TLS) và khi lưu trữ. Truy cập được
-            giới hạn bởi Firestore security rules.</li>
-        <li>Chúng tôi không lưu mật khẩu — đăng nhập được uỷ quyền hoàn
-            toàn cho Google hoặc Apple.</li>
-      </ul>
-
-      <h2 id="vi-rights"><span class="num">7</span>Quyền của bạn</h2>
-      <p>
-        Tuỳ vào quyền tài phán (ví dụ GDPR ở EU/EEA, PIPA ở Hàn Quốc,
-        CCPA/CPRA ở California, Nghị định 13/2023/NĐ-CP ở Việt Nam), bạn
-        có quyền:
-      </p>
-      <ul>
-        <li>Truy cập dữ liệu cá nhân chúng tôi đang lưu;</li>
-        <li>Sửa thông tin không chính xác (có thể chỉnh sửa trong app);</li>
-        <li>Xoá tài khoản và dữ liệu liên quan;</li>
-        <li>Rút lại sự đồng ý (vị trí, thông báo, ID theo dõi) bất cứ lúc
-            nào;</li>
-        <li>Yêu cầu xuất dữ liệu — liên hệ qua email phía dưới;</li>
-        <li>Khiếu nại với cơ quan bảo vệ dữ liệu địa phương.</li>
-      </ul>
-
-      <h2 id="vi-children"><span class="num">8</span>Quyền riêng tư của trẻ em</h2>
-      <p>
-        Ứng dụng dành cho người dùng <strong>từ 17 tuổi trở lên</strong>.
-        Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em dưới độ
-        tuổi này. Ứng dụng yêu cầu xác minh độ tuổi ở lần khởi chạy đầu.
-        Nếu bạn nghi ngờ trẻ em đã cung cấp thông tin cá nhân cho chúng
-        tôi, vui lòng liên hệ và chúng tôi sẽ xoá.
-      </p>
-
-      <h2 id="vi-changes"><span class="num">9</span>Thay đổi chính sách</h2>
-      <p>
-        Chúng tôi có thể cập nhật chính sách này khi Ứng dụng phát triển.
-        Trường "Hiệu lực" ở đầu trang sẽ phản ánh phiên bản mới nhất. Các
-        thay đổi quan trọng sẽ được thông báo trong app. Tiếp tục sử dụng
-        sau thay đổi đồng nghĩa với việc bạn chấp nhận chính sách mới.
-      </p>
-
-      <h2 id="vi-contact"><span class="num">10</span>Liên hệ</h2>
-      <ul>
-        <li>Email: <a href="mailto:minxukr@gmail.com">minxukr@gmail.com</a></li>
-        <li>Trong app: <em>Cài đặt → Trung tâm hỗ trợ → Liên hệ</em></li>
-      </ul>
-    </section>
-
-  </div>
-</div>
-
-<footer>
-  <p>© 2026 Korea Worker Team · All rights reserved.</p>
-</footer>
-
-<script>
-  (function () {
-    var buttons = document.querySelectorAll('.lang-switch button');
-    var sections = document.querySelectorAll('.lang-section');
-
-    function setLang(lang) {
-      buttons.forEach(function (b) {
-        b.classList.toggle('active', b.dataset.lang === lang);
-      });
-      sections.forEach(function (s) {
-        s.classList.toggle('active', s.dataset.lang === lang);
-      });
-      document.documentElement.lang = lang;
-      try { localStorage.setItem('kw_privacy_lang', lang); } catch (e) {}
-    }
-
-    // Restore last choice or detect from browser
-    var saved = null;
-    try { saved = localStorage.getItem('kw_privacy_lang'); } catch (e) {}
-    if (!saved) {
-      var nav = (navigator.language || 'en').toLowerCase();
-      if (nav.indexOf('ko') === 0) saved = 'ko';
-      else if (nav.indexOf('vi') === 0) saved = 'vi';
-      else saved = 'en';
-    }
-    setLang(saved);
-
-    buttons.forEach(function (b) {
-      b.addEventListener('click', function () { setLang(b.dataset.lang); });
-    });
-  })();
-</script>
-
-</body>
-</html>
+      
