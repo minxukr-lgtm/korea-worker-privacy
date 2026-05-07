@@ -209,7 +209,7 @@
   <div class="card">
 
     <div class="meta">
-      <span><strong>Effective date · 시행일 · Hiệu lực:</strong> May 1, 2026</span>
+      <span><strong>Effective date · 시행일 · Hiệu lực:</strong> May 7, 2026 (v1.0.24)</span>
       <span><strong>App:</strong> Korea Worker (com.koreaworker.app)</span>
       <span><strong>Developer · 개발자 · Nhà phát triển:</strong> Korea Worker Team</span>
     </div>
@@ -252,6 +252,12 @@
               <td>Display name, email, profile photo URL, language, region
                   (province), wage rate, employer-size flag</td>
               <td>You, Google Sign-In, Apple Sign-In</td></tr>
+          <tr><td>Searchable email index <em>(v1.0.23+)</em></td>
+              <td>A lowercase copy of your email is stored in your public
+                  profile to enable the "Find friend by email" feature.
+                  Other users can find you only if they know your exact email
+                  — they cannot list or browse all emails.</td>
+              <td>Derived from your sign-in email</td></tr>
           <tr><td>Authentication identifiers</td>
               <td>Firebase user ID (uid); Google/Apple OAuth tokens are used
                   only at sign-in time and are not stored by us</td>
@@ -261,8 +267,14 @@
                   notes</td>
               <td>You</td></tr>
           <tr><td>Community content</td>
-              <td>Posts, comments, reactions, chat messages (text, image,
-                  video, voice), reports, blocks</td>
+              <td>Posts, comments (including comments on Korea News articles),
+                  reactions, chat messages (text, image, video, voice),
+                  reports, blocks</td>
+              <td>You</td></tr>
+          <tr><td>News interactions <em>(v1.0.23+)</em></td>
+              <td>Likes, comments, share counts on AI-translated Korea News
+                  articles. Stored together with your UID + display name +
+                  photo URL when you interact.</td>
               <td>You</td></tr>
           <tr><td>Media files</td>
               <td>Photos, videos, voice recordings you choose to share or set
@@ -379,6 +391,28 @@
               <td>Display in-app banner advertisements</td>
               <td><a href="https://support.google.com/admob/answer/6128543"
                      target="_blank" rel="noopener">link</a></td></tr>
+          <tr><td>Google Gemini AI <em>(server-side, v1.0.23+)</em></td>
+              <td>Translates and rewrites Korean news articles into Vietnamese.
+                  <strong>Does NOT process user data.</strong> Only public RSS
+                  content from Korean newspapers is sent to Gemini.</td>
+              <td><a href="https://ai.google.dev/gemini-api/terms"
+                     target="_blank" rel="noopener">link</a></td></tr>
+          <tr><td>Unsplash <em>(server-side, v1.0.23+)</em></td>
+              <td>Provides illustrative images for news articles under free
+                  license. Does NOT receive user data.</td>
+              <td><a href="https://unsplash.com/privacy"
+                     target="_blank" rel="noopener">link</a></td></tr>
+          <tr><td>GitHub Actions <em>(server-side, v1.0.23+)</em></td>
+              <td>Runs the news pipeline (fetch RSS → AI translate → write
+                  Firestore). Does NOT process user data.</td>
+              <td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+                     target="_blank" rel="noopener">link</a></td></tr>
+          <tr><td>Gmail SMTP <em>(server-side, v1.0.23+)</em></td>
+              <td>Sends notification emails to admin moderators when new news
+                  drafts are ready. Regular users do NOT receive emails from
+                  this system.</td>
+              <td><a href="https://policies.google.com/privacy"
+                     target="_blank" rel="noopener">link</a></td></tr>
         </tbody>
       </table>
       <p>
@@ -386,7 +420,33 @@
         or to protect the rights, property and safety of users or the public.
       </p>
 
-      <h2 id="en-ads"><span class="num">5</span>Advertising &amp; Tracking</h2>
+      <h2 id="en-ai"><span class="num">5</span>AI-Translated News &amp; Friend Search</h2>
+      <p><strong>Korea News (AI-translated):</strong></p>
+      <ul>
+        <li>News content is fetched from public RSS feeds of Korean
+            newspapers (Korea Herald, Korea Times, Yonhap News, etc.) every
+            hour during 06:00-22:00 KST.</li>
+        <li>Google Gemini AI translates and rewrites the content into
+            Vietnamese for foreign workers in Korea. <strong>Your personal
+            data is never sent to Gemini.</strong></li>
+        <li>Articles are reviewed by app admins before publishing.</li>
+        <li>When you Like, Comment, or Share a news article, your UID,
+            display name, and photo URL are stored alongside that
+            interaction — same as for community posts.</li>
+      </ul>
+      <p><strong>Find Friend by Email (v1.0.23+):</strong></p>
+      <ul>
+        <li>A lowercase version of your sign-in email (<code>emailLowercase</code>)
+            is stored in your public user profile.</li>
+        <li>Other authenticated users can find you ONLY if they enter your
+            exact email — there is no way to browse or list all emails.</li>
+        <li>The search is exact-match only. Partial or wildcard searches
+            are not supported.</li>
+        <li>To opt-out, contact us at the email below; we can manually
+            remove the field from your profile.</li>
+      </ul>
+
+      <h2 id="en-ads"><span class="num">6</span>Advertising &amp; Tracking</h2>
       <p>
         The App displays advertisements through <strong>Google AdMob</strong>.
         AdMob may use a mobile advertising identifier (IDFA on iOS, AAID on
